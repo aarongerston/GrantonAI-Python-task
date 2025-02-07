@@ -15,7 +15,5 @@ EXPOSE 5000
 # Set environment variables for Flask
 ENV FLASK_APP = main.py
 
-COPY .env .env
-
 # Start the app
 CMD ["gunicorn", "-b", "0.0.0.0:5000", "main:app"]
